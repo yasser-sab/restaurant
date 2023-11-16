@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		:root{
+			--container-width:70%;
+			--body-font-size:16px;
+			--logo-color:#026e78;
+			--logo-font:x-large;
+			--link-color:#fff;
+			--link-padding:8px;
+			--link-font-size:12px;
+			--primary-link-background-color:#2d99a4;
+			--nav-link-display:inline-block;
+			--nav-link-width:20%;
+		}
+		*,*:before,*:after{
+			box-sizing: border-box;
+		}
+		body{
+			padding: 0;
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+			color: #fff;
+			font-size: var(--body-font-size);
+		}
+		.flex{
+			display: flex;
+		}
+		.jc-sb{
+			justify-content: space-between;
+		}
+		.ai-c{
+			align-items: center;
+		}
+		.container{
+			width: var(--container-width);
+			margin: 0 auto;
+		}
+		a{
+			display: block;
+			text-decoration: none;
+			font-size: var(--link-font-size);
+			transition: all .5s ease-in-out;
+		}
+		.link{
+			color: var(--link-color);
+			padding:var(--link-padding);
+		}
+		.primary-link{
+			background-color: var(--primary-link-background-color);
+		}
+		a:hover{
+			opacity: .8;
+		}
+		.active{
+			background-color: var(--link-color);
+			color: var(--logo-color);
+		}
+		.booking{
+			/*background-color: #026e78;*/
+			background-color: var(--logo-color);
+		}
+		.content{
+			background: silver url('bg.jpg') fixed no-repeat right top;
+			background-size: cover;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			text-transform: capitalize;
+		}
+		header{
+			padding: 10px 0;
+		}
+		.pre-nav{
+			padding: 10px 0;
+		}
+		nav{
+			font-size: 0px;
+			text-align: center;
+		}
+		.logo{
+			color: var(--logo-color);
+			font-size: var(--logo-font);
+			font-weight: bold;
+		}
+		.logo>i{
+			margin-right: 5px;
+		}
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		ul>li{
+			display: var(--nav-link-display);
+			width: var(--nav-link-width);
+		}
+		main{
+			flex-grow: 1;
+		}
+		main h1,main a{
+			display: inline-block;		
+			margin:0 0 10px 0;
+		}
+
+		@media screen and (max-width: 637px){
+			:root{
+				--nav-link-display:block;
+				--nav-link-width:100%;
+				--container-width:100%;
+				/*--body-font-size:14px;
+				--logo-font:medium;
+				--link-padding:5px;
+				--link-font-size:10px;*/
+			}
+			.pre-nav{
+				display: block;
+				text-align: center;
+			}
+		}
+		
+	</style>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="content">
+		<header>
+			<div class="container">
+				<div class="pre-nav flex jc-sb ai-c">
+					<div class="logo">
+						<i class="fa fa-cutlery"></i>	
+						restaurant
+					</div>
+					<div class="contact">
+						call us on 08 200 4000
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#" class="link active">home</a></li>
+						<li><a href="#" class="link primary-link">about us</a></li>
+						<li><a href="#" class="link primary-link">menu</a></li>
+						<li><a href="#" class="link primary-link">contact us</a></li>
+						<li><a href="#" class="link booking">book a table</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="flex ai-c">
+			<div class="container">
+				<h1 class="link booking">try something new</h1><br>
+					<a href="#" class="link active">book a table</a><br>
+				<a href="#" class="link primary-link">view our menu</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
